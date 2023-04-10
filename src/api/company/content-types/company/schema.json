@@ -1,0 +1,55 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "singularName": "company",
+    "pluralName": "companies",
+    "displayName": "Company"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "maxLength": 200
+    },
+    "legalNumber": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "country": {
+      "type": "string",
+      "required": true
+    },
+    "address": {
+      "type": "string",
+      "required": true,
+      "maxLength": 500
+    },
+    "corporateEmail": {
+      "type": "email",
+      "required": true,
+      "maxLength": 500
+    },
+    "enable": {
+      "type": "boolean",
+      "default": true,
+      "required": true
+    },
+    "logo": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
